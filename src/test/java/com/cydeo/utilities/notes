@@ -17,20 +17,21 @@ CUKES RUNNER CLASS:
 
    )
 
-
 @wip - Work In Progress - when you first start
 
+GIVEN - IS A CONDITION
+and - another condition
+WHEN - IS AN ACTION
+then - is a validation
 
 
-* if step is the same you dont have to re implements
-
-
+* if step is the same you dont have to re implement
+===============================================================
 public class Hooks{
     @Before
     public void setupScenario(Scenario scenario) {
        "Scenario name: " + scenario.getName();
     }
-
 
      @After
      public void tearDownScenario(Scenario scenario){
@@ -39,12 +40,14 @@ public class Hooks{
 
 }
 
+===============================================================
 
     FLOW:
      @Before
      Background --> in feature - common for everyone
     Scenario:
     @After
+
 
 you can setUp for specific tags and put order
   @Before (value = "@db", order = 3)
@@ -62,8 +65,6 @@ you can setUp for specific tags and put order
 
 1. to parameterize :
         "{word} is hungry"  -->> works immediately
-
-
 
 in hooks - we implements taking screenshots
 

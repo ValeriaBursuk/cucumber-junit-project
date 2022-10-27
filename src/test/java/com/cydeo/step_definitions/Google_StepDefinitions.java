@@ -21,7 +21,7 @@ public class Google_StepDefinitions {
 
     @When("User types apple in google search box and hits Enter")
     public void user_types_in_google_search_box() {
-      googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
+        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
     }
 
 

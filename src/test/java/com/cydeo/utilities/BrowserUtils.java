@@ -44,16 +44,15 @@ public class BrowserUtils {
 
 
 
-//    public static void verifyTitle(String expectedTitle){
-//        String actualTitle = Driver.getDriver().getTitle();
-//        Assert.assertEquals(expectedTitle, actualTitle);
-//
-//    }
+    public static void verifyTitle(String expectedTitle){
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertEquals("Title Verification Failed", actualTitle, expectedTitle);
 
+    }
 
-
-
-
-
+    public static void verifyTitleContains(String expectedTitle){
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue("Title Verification Failed", actualTitle.contains(expectedTitle));
+    }
 }
 

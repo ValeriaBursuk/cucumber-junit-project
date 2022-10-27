@@ -5,6 +5,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 //for all step definitions before everything
@@ -19,22 +21,13 @@ public class Hooks {
     @After
     public void tearDownScenario(Scenario scenario){
         System.out.println("---@After each scenario----closing browser------");
+
+        if(scenario.isFailed()){
+            byte[]screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", scenario.getName());
+        }
+
         Driver.closeDriver();
-        System.out.println("Scenario failed? " + scenario.isFailed());
-        //taking a screenshot after each scenario
+
     }
-
-
-
-
-   // @BeforeStep
-//    @Before(value = "@login")
-//    public void setupLogin() {
-//        System.out.println("value = @login - to run before any specific feature/scenario");
-//    }
-    //@Before (value = "@db", order = 3)
-    //public void setupDataBaseScenario(){
-//}
-
-
 }
