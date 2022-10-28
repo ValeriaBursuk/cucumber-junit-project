@@ -12,7 +12,6 @@ Feature: Etsy Title Verification
     And user clicks search button
     Then user should see Wooden Spoon in the title
 
-    @wip
   Scenario: Etsy Search Functionality Title Verification (with parameterization)
     When user types "wooden spoon" in search box
     And user clicks search button

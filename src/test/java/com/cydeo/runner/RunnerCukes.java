@@ -10,10 +10,8 @@ import org.junit.runner.RunWith;
         plugin = "html:target/cucumber-report.html",
         features = "src/test/resources/features" , //FEATURES PATH copy CONTENT ROOT
         glue = "com/cydeo/step_definitions", //glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs hooks first
-        //dryRun = false, - default value is false
         //dryRun = true, //- returns snippets,
-        //if no tags - runs everything
-        tags =  "@wiki"                //"@wip" //"@eating-cucumber"
+        tags =  "@wip" //if no tags - runs everything
 )
 
 public class RunnerCukes {

@@ -3,24 +3,25 @@ package com.cydeo.step_definitions;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-public class Hooks {
+public class Hook {
 //for all step definitions before everything
 
     @Before
-    public void setupScenario(Scenario scenario) {
+    public void setup(Scenario scenario) {
         System.out.println("----@Before each scenario----setting up browser------");
+        System.out.println("----HOOK CLASS ------- SETUP SCENARIO------");
         System.out.println("Scenario name: " + scenario.getName());
     }
 
 
     @After
-    public void tearDownScenario(Scenario scenario){
+    public void tearDown(Scenario scenario){
         System.out.println("---@After each scenario----closing browser------");
+        System.out.println("---HOOK CLASS----TEARDOWN SCENARIO------");
 
         if(scenario.isFailed()){
             byte[]screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);

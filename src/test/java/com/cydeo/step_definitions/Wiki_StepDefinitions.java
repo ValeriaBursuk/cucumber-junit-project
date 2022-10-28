@@ -6,6 +6,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Wiki_StepDefinitions {
 
@@ -30,4 +31,18 @@ public class Wiki_StepDefinitions {
     public void user_should_see_is_in_the_wiki_title(String searchKeyword) {
         BrowserUtils.verifyTitleContains(searchKeyword);
     }
-}
+
+    @Then("User should see {string} in the main header")
+    public void user_should_see_in_the_main_header(String keyWord) {
+        Assert.assertTrue(wikiPage.getMainHeader().getText().contains(keyWord));
+    }
+
+    @Then("User should see {string} in image header")
+    public void user_should_see_in_image_header(String keyWord) {
+       Assert.assertTrue(wikiPage.getImgHeader().getText().contains(keyWord));
+    }
+
+
+
+
+    }

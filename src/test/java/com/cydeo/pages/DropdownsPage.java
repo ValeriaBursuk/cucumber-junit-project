@@ -3,10 +3,9 @@ package com.cydeo.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class GoogleSearchPage extends BasePage {
+public class DropdownsPage extends BasePage{
 
-    @FindBy(name = "q")
-    public WebElement searchBox;
-
+    @FindBy(id = "month")
+    public WebElement months_dropdown;
 
 }

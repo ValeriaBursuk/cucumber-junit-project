@@ -1,11 +1,9 @@
 package com.cydeo.pages;
 
-import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class EtsyPage {
+public class EtsyPage extends BasePage {
 
     @FindBy(id = "global-enhancements-search-query")
     private WebElement searchBox;
@@ -13,10 +11,6 @@ public class EtsyPage {
     @FindBy(xpath = "//button[@type='submit'][@value='Search']")
     private WebElement searchButton;
 
-
-    public EtsyPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
 
     public WebElement getSearchBox() {
         return searchBox;

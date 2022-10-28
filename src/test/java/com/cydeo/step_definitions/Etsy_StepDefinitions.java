@@ -26,10 +26,12 @@ public class Etsy_StepDefinitions {
     public void user_types_wooden_spoon_in_search_box() {
         etsyPage.getSearchBox().sendKeys("Wooden Spoon");
     }
+
     @When("user clicks search button")
     public void user_clicks_search_button() {
         etsyPage.getSearchButton().click();
     }
+
     @Then("user should see Wooden Spoon in the title")
     public void user_should_see_wooden_spoon_in_the_title() {
         BrowserUtils.verifyTitleContains("Wooden spoon");
@@ -39,13 +41,11 @@ public class Etsy_StepDefinitions {
     public void user_types_in_search_box(String keyword) {
         etsyPage.getSearchBox().sendKeys(keyword);
     }
+
     @Then("user should see {string} in the title")
     public void user_should_see_in_the_title(String keyword) {
         BrowserUtils.verifyTitleContains(keyword);
     }
-
-
-
-
-
 }
+
+
