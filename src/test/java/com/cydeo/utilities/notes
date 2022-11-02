@@ -1,4 +1,10 @@
 
+FILE - INVALIDATE CHACHES
+MAVEN --> CLEAN - to delete rerun.txt
+~/.m2 file - repository -> select all folder -> delete
+maven -> reload
+
+
 CUKES RUNNER CLASS:
        @RunWith
        @CucumberOptions (
@@ -55,10 +61,8 @@ you can setUp for specific tags and put order
    @BeforeStep
    @AfterStep
 
-
-
-
-
+in test - assertion
+in utility - take actionn
 
 
 

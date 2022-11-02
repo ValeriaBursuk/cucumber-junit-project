@@ -1,4 +1,3 @@
-@wip
 Feature: Dropdowns
 Scenario: User should be able to see 12 months in months
 dropdown

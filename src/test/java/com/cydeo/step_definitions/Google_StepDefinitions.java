@@ -16,7 +16,7 @@ public class Google_StepDefinitions {
 
     @Given("User is on Google search page")
     public void user_is_on_google_search_page() {
-        Driver.getDriver().get(ConfigReader.getProperty("google.url"));
+        Driver.getDriver().get(ConfigReader.getProperty("google_url"));
     }
 
     @When("User types apple in google search box and hits Enter")
@@ -41,6 +41,9 @@ public class Google_StepDefinitions {
     public void userShouldSeeInGoogleTitle(String expectedTitle) {
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue("Title Verification Failed", actualTitle.contains(expectedTitle));
+
+
+
 
     }
 }
