@@ -8,7 +8,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Map;
 
 public class WebTableLogin_StepDefinitions {
@@ -22,6 +26,9 @@ WebTable_LoginPage webTable_page = new WebTable_LoginPage();
 
     @When("User enters valid credentials and clicks login button")
     public void user_enters_valid_credentials_and_clicks_login_button(Map<String, String> credentials) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
+        wait.until(ExpectedConditions.visibilityOf(webTable_page.usernameBox);
+        wait.until(ExpectedConditions.visibilityOf(webTable_page.passwordBox));
         webTable_page.login(credentials.get("username"), credentials.get("password"));
     }
 
