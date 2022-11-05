@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"html:target/cucumber-report.html", //can write whatever instead of cucumber-report
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
-                "rerun:target/rerun.txt"
+                "rerun:target/rerun.txt",
+                "json:target/cucumber.json"
         },
         features = "src/test/resources/features" , //FEATURES PATH copy CONTENT ROOT
         glue = "com/cydeo/step_definitions",//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs hooks first
