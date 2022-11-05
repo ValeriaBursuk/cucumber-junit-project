@@ -27,7 +27,7 @@ WebTable_LoginPage webTable_page = new WebTable_LoginPage();
     @When("User enters valid credentials and clicks login button")
     public void user_enters_valid_credentials_and_clicks_login_button(Map<String, String> credentials) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
-        wait.until(ExpectedConditions.visibilityOf(webTable_page.usernameBox);
+        wait.until(ExpectedConditions.visibilityOf(webTable_page.usernameBox));
         wait.until(ExpectedConditions.visibilityOf(webTable_page.passwordBox));
         webTable_page.login(credentials.get("username"), credentials.get("password"));
     }
