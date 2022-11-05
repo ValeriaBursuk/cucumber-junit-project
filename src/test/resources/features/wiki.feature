@@ -4,6 +4,7 @@ Feature: Wikipedia Search Functionality Title Verification, Header verification,
   Background:
     Given User is on Wikipedia home page
 
+    @smoke
   Scenario: User should see searched word in the title
     When User types "Steve Jobs" in the wiki search box
     And User clicks wiki search button
@@ -17,7 +18,7 @@ Feature: Wikipedia Search Functionality Title Verification, Header verification,
 #    And User clicks wiki search button
 #    Then User should see "Steve Jobs" in image header
 
-  @smoke
+  @wiki
   Scenario Outline:
     Given User is on Wikipedia home page
     When User types "<word>" in the wiki search box

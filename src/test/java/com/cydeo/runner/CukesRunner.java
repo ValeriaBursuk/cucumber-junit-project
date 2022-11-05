@@ -12,9 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         },
         features = "src/test/resources/features" , //FEATURES PATH copy CONTENT ROOT
-        glue = "com/cydeo/step_definitions"//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs hooks first
-        //dryRun = true, //- returns snippets,
-        //tags = "@wiki" //if no tags - runs everything
+        glue = "com/cydeo/step_definitions",//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs hooks first
+        //dryRun = true,//- returns snippets,
+        tags = "@wiki" //if no tags - runs everything
 )
 
 public class CukesRunner {
