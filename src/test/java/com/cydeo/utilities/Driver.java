@@ -17,13 +17,10 @@ public class Driver {
     private Driver() {
     }
 
-
-
     private static WebDriver driver;
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     public static WebDriver getDriver() {
-
 
         // it will check if driver is null and if it is we will set up browser inside if statement
         // if you already setup driver and using it again for following line of codes, it will return to same driver

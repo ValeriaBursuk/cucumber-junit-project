@@ -1,4 +1,4 @@
-@webtable
+@smoke
 Feature: User should be able to login to WebTables application
   Scenario: Login with valid credentials MAP
     Given User is on homepage
