@@ -1,4 +1,4 @@
-@smoke
+
 Feature: Etsy Title Verification
   Background:
     Given user is on Etsy homepage
