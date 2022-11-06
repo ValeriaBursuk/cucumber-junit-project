@@ -18,10 +18,11 @@ public class WebTable_LoginPage extends BasePage {
 
     public void login(String username, String password){
         usernameBox.sendKeys(username);
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(1);
         passwordBox.sendKeys(password);
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(1);
         loginBtn.click();
+        BrowserUtils.sleep(2);
     }
 
 }
