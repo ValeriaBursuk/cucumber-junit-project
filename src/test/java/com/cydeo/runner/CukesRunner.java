@@ -13,9 +13,11 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         features = "src/test/resources/features" , //FEATURES PATH copy CONTENT ROOT
-        glue = "com/cydeo/step_definitions",//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs hooks first
+        glue = "com/cydeo/step_definitions",//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs
+        publish = true
+        // hooks first
         //dryRun = true,//- returns snippets,
-        tags = "@smoke" //if no tags - runs everything
+       // tags = "@smoke" //if no tags - runs everything
 )
 
 public class CukesRunner {

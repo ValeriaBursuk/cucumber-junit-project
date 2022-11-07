@@ -4,8 +4,13 @@ import com.cydeo.utilities.ConfigReader;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class Smartbear_LoginPage extends BasePage{
+public class Smartbear_LoginPage {
+    public Smartbear_LoginPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
 
     @FindBy(id = "ctl00_MainContent_username")
     public WebElement usernamePlaceholder; //declaring an instance field
