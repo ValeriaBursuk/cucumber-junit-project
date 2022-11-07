@@ -16,13 +16,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebTableOrder_StepDefinitions {
 
+    WebTable_LoginPage webTable_loginPage = new WebTable_LoginPage();
     WebTable_OrderPage webTable_orderPage = new WebTable_OrderPage();
 
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
         Driver.getDriver().get(ConfigReader.getProperty("webtables_url"));
-        new WebTable_LoginPage().login(ConfigReader.getProperty("webtables_username"), ConfigReader.getProperty("webtables_password"));
-        BrowserUtils.waitForVisibilityOf(webTable_orderPage.orderSideBar);
+       webTable_loginPage.login(ConfigReader.getProperty("webtables_username"), ConfigReader.getProperty("webtables_password"));
+       BrowserUtils.sleep(1);
         webTable_orderPage.orderSideBar.click();
     }
 

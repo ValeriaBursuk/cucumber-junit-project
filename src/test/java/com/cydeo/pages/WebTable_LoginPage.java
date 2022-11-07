@@ -22,7 +22,6 @@ public class WebTable_LoginPage extends BasePage {
         passwordBox.sendKeys(password);
         BrowserUtils.sleep(1);
         loginBtn.click();
-        BrowserUtils.sleep(2);
     }
 
 }
