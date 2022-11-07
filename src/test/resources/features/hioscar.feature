@@ -1,5 +1,5 @@
+@smoke
 Feature: Hioscar Search
-@hioskar
   Scenario: Title Verification
 
   Given user is on homepage and user clicks "Search network"

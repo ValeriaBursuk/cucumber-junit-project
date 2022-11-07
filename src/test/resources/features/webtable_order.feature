@@ -1,4 +1,3 @@
-@smoke
 Feature: WebTable Order
   Scenario: User should be able to place order and order seen in web table
     Given user is already logged in and on order page
