@@ -23,7 +23,8 @@ public class WebTableOrder_StepDefinitions {
     public void user_is_already_logged_in_and_on_order_page() {
         Driver.getDriver().get(ConfigReader.getProperty("webtables_url"));
        webTable_loginPage.login(ConfigReader.getProperty("webtables_username"), ConfigReader.getProperty("webtables_password"));
-       BrowserUtils.sleep(1);
+       BrowserUtils.waitUntilClickable(webTable_orderPage.orderSideBar);
+        System.out.println(Driver.getDriver().getCurrentUrl());
         webTable_orderPage.orderSideBar.click();
     }
 

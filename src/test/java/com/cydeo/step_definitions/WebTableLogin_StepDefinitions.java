@@ -27,6 +27,7 @@ WebTable_LoginPage webTable_page = new WebTable_LoginPage();
     @When("User enters valid credentials and clicks login button")
     public void user_enters_valid_credentials_and_clicks_login_button(Map<String, String> credentials) {
         webTable_page.login(credentials.get("username"), credentials.get("password"));
+
     }
 
     @Then("Expected URL should end with {string}")
