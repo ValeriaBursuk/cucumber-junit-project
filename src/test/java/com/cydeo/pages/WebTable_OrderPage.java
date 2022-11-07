@@ -17,7 +17,7 @@ public class WebTable_OrderPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//button[.='Order']")
+    @FindBy(linkText = "Order")  //(xpath = "//button[.='Order']")
     public WebElement orderSideBar;
 
     @FindBy(xpath = "//button[.='View all orders']")
