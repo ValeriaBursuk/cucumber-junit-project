@@ -1,9 +1,6 @@
 node {
     stage('Clone code') {
         git 'https://github.com/ValeriaBursuk/cucumber-junit-project'
-        environment {
-                        BITBUCKET_COMMON_CREDS = credentials('ValeriaBursuk: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')
-                    }
     }
 
     stage('Run tests'){
