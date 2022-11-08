@@ -23,5 +23,4 @@ public class EatingCucumber_StepDefinitions {
     public void he_will_be_too_full() {
         System.out.println("he will be too full steps");
     }
-
 }
