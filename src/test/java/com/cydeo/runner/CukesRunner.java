@@ -14,10 +14,10 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features" , //FEATURES PATH copy CONTENT ROOT
         glue = "com/cydeo/step_definitions",//glue - STEP DEFINITIONS PATH copy SOURCE ROOT --> runs
-        publish = true
+        publish = true,
         // hooks first
         //dryRun = true,//- returns snippets,
-       // tags = "@smoke" //if no tags - runs everything
+        tags = "@wip" //if no tags - runs everything
 )
 
 public class CukesRunner {
