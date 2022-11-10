@@ -1,4 +1,4 @@
-@google
+@smoke
 Feature: Google search functionality title verification
   User story: As a user, I should be able to search anything in Google and see results
 
