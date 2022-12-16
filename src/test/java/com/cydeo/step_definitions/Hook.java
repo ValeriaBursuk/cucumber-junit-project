@@ -15,6 +15,7 @@ public class Hook {
         System.out.println("----@Before each scenario----setting up browser------");
         System.out.println("----HOOK CLASS ------- SETUP SCENARIO------");
         System.out.println("Scenario name: " + scenario.getName());
+
     }
 
 
